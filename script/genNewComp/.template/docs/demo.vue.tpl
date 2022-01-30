@@ -1,20 +1,19 @@
 <template>
   <div>
-    <i-button @click="handleClick">自定义按钮</i-button>
+    <{{compClassName}}>{{compZhName}}</{{compClassName}}>
   </div>
 </template>
 
 <script>
 export default {
+  name: "{{compName}}Demo",
   data() {
     return {
-      num: 0,
+
     };
   },
   methods: {
-    handleClick() {
-      alert(this.num++);
-    },
+    
   },
 };
 </script>

@@ -3,9 +3,9 @@
     <aside>
       <router-link
         v-for="component in components"
-        :key="component.key"
-        :to="component.to"
-        >{{ component.name }}
+        :key="component.compName"
+        :to="`/components/${component.compClassName}`"
+        >{{ component.compZhName }}
       </router-link>
     </aside>
     <main class="markdown-body">
@@ -41,7 +41,7 @@ export default {
     padding: 20px;
     flex: 1;
     overflow: auto;
-    border-right: 1px #ccc solid;
+    border-right: 1px solid #aaa;
     a {
       display: block;
       font-weight: bold;

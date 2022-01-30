@@ -1,12 +1,1 @@
-[
-  {
-    "name": "按钮",
-    "key": "button",
-    "to": "/components/button"
-  },
-  {
-    "name": "表格",
-    "key": "table",
-    "to": "/components/table"
-  }
-]
+[]
