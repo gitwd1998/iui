@@ -41,7 +41,6 @@ export default {
     padding: 20px;
     flex: 1;
     overflow: auto;
-    border-right: 1px solid #aaa;
     a {
       display: block;
       font-weight: bold;
@@ -52,6 +51,7 @@ export default {
     }
   }
   main {
+    border-left: 1px solid var(--color-border-muted);
     padding: 20px;
     overflow: auto;
     flex: 6;
