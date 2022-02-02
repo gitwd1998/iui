@@ -58,3 +58,16 @@ export default {
   }
 }
 </style>
+<style>
+.markdown-body .header-anchor {
+  display: none;
+}
+.markdown-body h1:hover .header-anchor,
+.markdown-body h2:hover .header-anchor,
+.markdown-body h3:hover .header-anchor,
+.markdown-body h4:hover .header-anchor,
+.markdown-body h5:hover .header-anchor,
+.markdown-body h6:hover .header-anchor {
+  display: inline-block;
+}
+</style>
