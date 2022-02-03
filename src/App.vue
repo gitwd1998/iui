@@ -38,13 +38,31 @@ export default {
   color: #2c3e50;
   display: flex;
   aside {
-    padding: 20px;
     flex: 1;
     overflow: auto;
     a {
+      padding: 8px 20px;
       display: block;
+      position: relative;
       font-weight: bold;
       color: #2c3e50;
+      + a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 0;
+        height: 1px;
+        transform-origin: 0 0;
+        transform: scaleY(0.5);
+        background: #2c3e50;
+      }
+      &:first-of-type {
+        margin-top: 12px;
+      }
+      &:last-of-type {
+        margin-bottom: 12px;
+      }
       &.router-link-active {
         color: #42b983;
       }
@@ -54,7 +72,7 @@ export default {
     border-left: 1px solid var(--color-border-muted);
     padding: 20px;
     overflow: auto;
-    flex: 6;
+    flex: 5;
   }
 }
 </style>
