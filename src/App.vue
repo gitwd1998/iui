@@ -31,14 +31,14 @@ export default {
 #app {
   width: 100%;
   height: 100%;
-  min-width: 960px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  display: flex;
   aside {
-    flex: 1;
+    position: fixed;
+    height: 100%;
+    width: 200px;
     overflow: auto;
     a {
       padding: 8px 20px;
@@ -69,10 +69,9 @@ export default {
     }
   }
   main {
-    border-left: 1px solid var(--color-border-muted);
     padding: 20px;
-    overflow: auto;
-    flex: 5;
+    margin-left: 200px;
+    border-left: 1px solid var(--color-border-muted);
   }
 }
 </style>
