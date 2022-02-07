@@ -1,9 +1,8 @@
 // https://highlightjs.org/
 const hljs = require('highlight.js')
-// https://www.npmjs.com/package/markdown-it-anchor
-// https://github.com/valeriangalliat/markdown-it-anchor/blob/HEAD/README-zh_CN.md
 const anchorPlugin = require('markdown-it-anchor');
 const containers = require('./containers');
+const transliteration = require('transliteration');
 const overWriteFenceRule = require('./fence');
 
 // https://markdown-it.docschina.org/
@@ -21,6 +20,7 @@ const md = require('markdown-it')({
   }
 }).use(anchorPlugin, {
   level: 1,
+  slugify: transliteration.slugify,
   permalink: true,
   permalinkSpace: true,
   permalinkBefore: true

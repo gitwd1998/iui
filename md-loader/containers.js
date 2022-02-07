@@ -1,6 +1,4 @@
-// https://github.com/markdown-it/markdown-it-container
 const mdContainer = require('markdown-it-container')
-
 
 module.exports = md => {
   md.use(mdContainer, 'demo', {
