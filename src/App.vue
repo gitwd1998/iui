@@ -1,16 +1,17 @@
 <template>
-  <div id="app">
+  <div id="app" class="markdown-body">
     <aside>
       <router-link
         v-for="component in components"
         :key="component.compName"
         :to="`/components/${component.compClassName}`"
+        style="padding: 8px 20px"
         >{{ component.compZhName }}
       </router-link>
     </aside>
-    <main class="markdown-body">
+    <main>
       <keep-alive>
-        <router-view></router-view>
+        <router-view style="padding: 20px"></router-view>
       </keep-alive>
     </main>
   </div>
@@ -41,7 +42,6 @@ export default {
     width: 200px;
     overflow: auto;
     a {
-      padding: 8px 20px;
       display: block;
       position: relative;
       font-weight: bold;
@@ -55,7 +55,7 @@ export default {
         height: 1px;
         transform-origin: 0 0;
         transform: scaleY(0.5);
-        background: #2c3e50;
+        background: var(--color-border-muted);
       }
       &:first-of-type {
         margin-top: 12px;
@@ -69,7 +69,7 @@ export default {
     }
   }
   main {
-    padding: 20px;
+    min-height: 100%;
     margin-left: 200px;
     border-left: 1px solid var(--color-border-muted);
   }

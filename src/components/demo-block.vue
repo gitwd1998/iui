@@ -56,7 +56,7 @@ export default {
       border-radius: 3px;
       color: #666;
       word-break: break-word;
-      background: var(--color-canvas-subtle);
+      border: 1px solid var(--color-border-muted);
     }
     .highlight {
       margin: 10px;
